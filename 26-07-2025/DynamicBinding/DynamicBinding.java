@@ -31,7 +31,7 @@ public class DynamicBinding {
         // because applyBreak() is not defined in Bike class.
         // Variables are resolved at compile time by reference type,
         // while overridden methods are resolved at runtime by object type.
-        // Comment summary:
+        // Comment summary:a
         // -> For variables, Java first checks in the parent class.
         //    If found, it will use that value even if a field of same name exists in subclass.
         //    If not found in parent, it throws a compilation error.

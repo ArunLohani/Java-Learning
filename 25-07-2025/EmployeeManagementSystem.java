@@ -3,222 +3,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-enum TechStack{
 
-    JAVA,
-    NODE,
-    ANGULAR,
-    REACT
 
 
 
-}
-
-class Employee{
-
-    String empName;
-    String empId;
-    String joiningDate;
-    String dob;
-    float salary;
-    int exp;
-    boolean deptAssigned = false;
-
-    String deptId = null;
-
-    static int empStrength=0;
-
-    Employee( String empName,String joiningDate,String dob,float salary){
-
-
-        this.empName = empName;
-        this.joiningDate = joiningDate;
-        this.dob = dob;
-        this.salary = salary;
-        empStrength++;
-        this.empId = "E-" + empStrength;
-
-    }
-
-
-    public void displayInfo(){
-
-        System.out.print("ID: " + empId + " Name:" + empName + " dob:"+dob);
-
-        if(deptAssigned){
-            System.out.print("DeptId: " + deptId);
-        }
-
-        System.out.println();
-
-    }
-
-    public float getSalary (){
-        return salary;
-    }
-
-
-
-
-
-}
-
-
-class Probationer extends Employee {
-
-    int duration;
-    TechStack learningPath;
-
-    Probationer(String empName,String joiningDate,String dob,float salary,int duration , TechStack learningPath){
-
-        super(empName,joiningDate,dob,salary);
-        this.duration = duration;
-        this.learningPath = learningPath;
-
-    }
-
-    @Override
-
-    public void displayInfo(){
-
-        System.out.println("ID: " + empId + " Name:" + empName + " dob:"+dob+" duration: "+duration
-                + "Learning Path: " + learningPath
-        );
-
-    }
-
-
-    @Override
-    public float getSalary(){
-
-        return this.salary * 0.5f;
-
-
-    }
-
-}
-
-class ProgramAnalyst extends Employee {
-
-    int exp;
-    String project;
-
-    TechStack tech;
-
-    ProgramAnalyst(String empName,String joiningDate,String dob,float salary,int exp, TechStack tech , String project){
-
-        super(empName,joiningDate,dob,salary);
-        this.exp = exp;
-        this.project = project;
-        this.tech = tech;
-    }
-
-    @Override
-
-    public void displayInfo(){
-
-        System.out.println("ID: " + empId + " Name:" + empName + " dob:"+dob
-                + "Tech : " + tech + " Project: "+ project
-        );
-
-    }
-
-
-    @Override
-    public float getSalary(){
-
-        return this.salary * (1 + (float)exp/100);
-
-
-    }
-
-
-}
-
-class BusinessAnalyst extends Employee{
-
-
-    int exp;
-
-
-
-
-    BusinessAnalyst(String empName,String joiningDate,String dob,float salary,int exp){
-
-        super(empName,joiningDate,dob,salary);
-        this.exp = exp;
-
-    }
-
-
-    @Override
-    public float getSalary(){
-
-        return this.salary * (1 + (float)exp/200);
-
-
-    }
-
-
-}
-
-class Department {
-
-    String deptId;
-    String deptName;
-    static int deptStrength = 0;
-    List<Employee> employees;
-
-    Department(String deptName){
-        this.deptName = deptName;
-        deptStrength++;
-        this.deptId = "D-" + deptStrength;
-        this.employees = new ArrayList<>();
-    }
-
-
-    public void addEmployee(Employee e){
-
-        employees.add(e);
-
-    }
-
-    public List<Employee> getEmployees(){
-
-        return employees;
-
-    }
-
-    public String getDeptId (){
-
-        return deptId;
-    }
-
-    public String getDeptName(){
-        return deptName;
-    }
-
-    public void displayDepartmentInfo(){
-
-        System.out.println("Dept Id : "+ deptId +" "+ deptName + " Department");
-        System.out.println("Employees Info : ");
-
-        if(employees.isEmpty()){
-            System.out.println("No Employees Assigned yet.");
-        }else{
-            for(Employee e : employees){
-                e.displayInfo();
-            }
-        }
-
-
-    }
-
-}
-
-
-
-class EmployeeManagementSystem {
+public class EmployeeManagementSystem {
 
     static  HashMap<String , List<Employee> > empDB = new HashMap<>();
     static HashMap<String , List<Employee> > empDeptDB = new HashMap<>();
@@ -459,4 +248,218 @@ class EmployeeManagementSystem {
 
 
 
+
+
+enum TechStack{
+
+    JAVA,
+    NODE,
+    ANGULAR,
+    REACT
+
+
+
+}
+
+class Employee{
+
+    String empName;
+    String empId;
+    String joiningDate;
+    String dob;
+    float salary;
+    int exp;
+    boolean deptAssigned = false;
+
+    String deptId = null;
+
+    static int empStrength=0;
+
+    Employee( String empName,String joiningDate,String dob,float salary){
+
+
+        this.empName = empName;
+        this.joiningDate = joiningDate;
+        this.dob = dob;
+        this.salary = salary;
+        empStrength++;
+        this.empId = "E-" + empStrength;
+
+    }
+
+
+    public void displayInfo(){
+
+        System.out.print("ID: " + empId + " Name:" + empName + " dob:"+dob);
+
+        if(deptAssigned){
+            System.out.print("DeptId: " + deptId);
+        }
+
+        System.out.println();
+
+    }
+
+    public float getSalary (){
+        return salary;
+    }
+
+
+
+
+
+}
+
+
+class Probationer extends Employee {
+
+    int duration;
+    TechStack learningPath;
+
+    Probationer(String empName,String joiningDate,String dob,float salary,int duration , TechStack learningPath){
+
+        super(empName,joiningDate,dob,salary);
+        this.duration = duration;
+        this.learningPath = learningPath;
+
+    }
+
+    @Override
+
+    public void displayInfo(){
+
+        System.out.println("ID: " + empId + " Name:" + empName + " dob:"+dob+" duration: "+duration
+                + "Learning Path: " + learningPath
+        );
+
+    }
+
+
+    @Override
+    public float getSalary(){
+
+        return this.salary * 0.5f;
+
+
+    }
+
+}
+
+class ProgramAnalyst extends Employee {
+
+    int exp;
+    String project;
+
+    TechStack tech;
+
+    ProgramAnalyst(String empName,String joiningDate,String dob,float salary,int exp, TechStack tech , String project){
+
+        super(empName,joiningDate,dob,salary);
+        this.exp = exp;
+        this.project = project;
+        this.tech = tech;
+    }
+
+    @Override
+
+    public void displayInfo(){
+
+        System.out.println("ID: " + empId + " Name:" + empName + " dob:"+dob
+                + "Tech : " + tech + " Project: "+ project
+        );
+
+    }
+
+
+    @Override
+    public float getSalary(){
+
+        return this.salary * (1 + (float)exp/100);
+
+
+    }
+
+
+}
+
+class BusinessAnalyst extends Employee{
+
+
+    int exp;
+
+
+
+
+    BusinessAnalyst(String empName,String joiningDate,String dob,float salary,int exp){
+
+        super(empName,joiningDate,dob,salary);
+        this.exp = exp;
+
+    }
+
+
+    @Override
+    public float getSalary(){
+
+        return this.salary * (1 + (float)exp/200);
+
+
+    }
+
+
+}
+
+class Department {
+
+    String deptId;
+    String deptName;
+    static int deptStrength = 0;
+    List<Employee> employees;
+
+    Department(String deptName){
+        this.deptName = deptName;
+        deptStrength++;
+        this.deptId = "D-" + deptStrength;
+        this.employees = new ArrayList<>();
+    }
+
+
+    public void addEmployee(Employee e){
+
+        employees.add(e);
+
+    }
+
+    public List<Employee> getEmployees(){
+
+        return employees;
+
+    }
+
+    public String getDeptId (){
+
+        return deptId;
+    }
+
+    public String getDeptName(){
+        return deptName;
+    }
+
+    public void displayDepartmentInfo(){
+
+        System.out.println("Dept Id : "+ deptId +" "+ deptName + " Department");
+        System.out.println("Employees Info : ");
+
+        if(employees.isEmpty()){
+            System.out.println("No Employees Assigned yet.");
+        }else{
+            for(Employee e : employees){
+                e.displayInfo();
+            }
+        }
+
+
+    }
+
+}
 
