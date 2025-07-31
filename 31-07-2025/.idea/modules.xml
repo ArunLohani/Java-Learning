@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/31-07-2025.iml" filepath="$PROJECT_DIR$/.idea/31-07-2025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashCodeAndEquals/HashCodeAndEquals.iml" filepath="$PROJECT_DIR$/HashCodeAndEquals/HashCodeAndEquals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading Concepts/MultiThreading Concepts.iml" filepath="$PROJECT_DIR$/MultiThreading Concepts/MultiThreading Concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading Concepts/ThreadPriorities/PreventThreadExecution/PreventThreadExecution.iml" filepath="$PROJECT_DIR$/MultiThreading Concepts/ThreadPriorities/PreventThreadExecution/PreventThreadExecution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading Concepts/ThreadPriorities/ThreadPriorities.iml" filepath="$PROJECT_DIR$/MultiThreading Concepts/ThreadPriorities/ThreadPriorities.iml" />
+    </modules>
+  </component>
+</project>
