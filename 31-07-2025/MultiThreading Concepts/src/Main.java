@@ -68,8 +68,13 @@ class MyRunnable implements Runnable{
 
 }
 
+
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        Thread mainThread = Thread.currentThread();
+
 
         MyThread t = new MyThread();
 
@@ -129,6 +134,14 @@ public class Main {
         System.out.println("Initial Thread name : " + th1.getName());
 
 
+
+
+
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Slide - " + i);
+            Thread.currentThread().sleep(5000);
+        }
 
 
     }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading Concepts.iml" filepath="$PROJECT_DIR$/MultiThreading Concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadPriorities/PreventThreadExecution/PreventThreadExecution.iml" filepath="$PROJECT_DIR$/ThreadPriorities/PreventThreadExecution/PreventThreadExecution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadPriorities/ThreadPriorities.iml" filepath="$PROJECT_DIR$/ThreadPriorities/ThreadPriorities.iml" />
+    </modules>
+  </component>
+</project>
