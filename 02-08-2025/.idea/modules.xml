@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/02-08-2025.iml" filepath="$PROJECT_DIR$/.idea/02-08-2025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronizationn/ClassLockSynchronization/ClassLockSynchronization.iml" filepath="$PROJECT_DIR$/Synchronizationn/ClassLockSynchronization/ClassLockSynchronization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DaemonThread/DaemonThread.iml" filepath="$PROJECT_DIR$/DaemonThread/DaemonThread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronizationn/InterThreadCommunication/InterThreadCommunication.iml" filepath="$PROJECT_DIR$/Synchronizationn/InterThreadCommunication/InterThreadCommunication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronizationn/Synchronized Block/Synchronized Block.iml" filepath="$PROJECT_DIR$/Synchronizationn/Synchronized Block/Synchronized Block.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Synchronizationn/Synchronized Method/Synchronized Method.iml" filepath="$PROJECT_DIR$/Synchronizationn/Synchronized Method/Synchronized Method.iml" />
+    </modules>
+  </component>
+</project>
