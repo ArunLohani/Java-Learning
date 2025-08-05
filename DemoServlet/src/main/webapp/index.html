@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Form Page</title>
+    </head>
+
+<body>
+
+    <h1>
+
+        My Form
+
+    </h1>
+
+
+<form action="RegisterServlet" method="POST">
+
+    <table>
+        <tr>
+            <td>Enter your Name : </td>
+            <td><input type="text" name="user_name" placeholder="Enter your Name : "/></td>
+        </tr>
+
+        <tr>
+            <td>Enter your password : </td>
+            <td><input type="password" name="user_password" placeholder="Enter your Password : "/></td>
+        </tr>
+
+        <tr>
+            <td>Enter your email : </td>
+            <td><input type="email" name="user_email" placeholder="Enter your email : "/></td>
+        </tr>
+
+        <tr>
+            <td>Select Gender : </td>
+            <td><input type="radio" name="user_gender" value="male"/>Male &nbsp; &nbsp;
+
+                <input type="radio" name="user_gender" value="female"/>Female &nbsp; &nbsp;
+            </td>
+
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+
+                Select your course :
+            </td>
+
+            <td>
+                <select name="user_course">
+                    <option value="Java">Java</option>
+                    <option value="Php">Php</option>
+                    <option value="Python">Python</option>
+                    <option value="Android">Android</option>
+
+                </select>
+
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+
+                <input type="checkbox" value="checked" name="condition"/>
+
+
+
+            </td>
+
+            <td>
+                Agree T&C
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+                <button type="submit">Submit</button>
+
+            </td>
+
+            <td>
+
+                <button type="reset">Reset</button>
+
+            </td>
+
+        </tr>
+
+
+    </table>
+
+
+</form>
+
+    <h1>
+
+       Login
+
+    </h1>
+
+
+
+      <form action="login" method="post" >
+          <table>
+              <tr>
+                  <td>Enter your Name : </td>
+                  <td><input type="text" name="name" placeholder="Enter your Name : "/></td>
+              </tr>
+
+
+              <tr>
+                  <td>
+                   <button>Submit</button>
+
+                  </td>
+
+
+              </tr>
+
+
+          </table>
+
+      </form>
+
+</body>
+
+
+
+
+</html>
