@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Defining the Dev bean -->
+    <bean id="dev" class="org.example.Dev" autowire="byName">
+        <!-- Constructor injection examples: -->
+        <!-- <property name="age" value="10"/>  --> <!-- Setter Injection -->
+        <!-- <constructor-arg name="age" value="15"/> --> <!-- Constructor Injection (by name) -->
+        <!-- Constructor injection using index position -->
+        <constructor-arg index="0" value="16"/>
+        <!-- Inject Laptop dependency through Setter Injection -->
+        <property name="comp" ref="laptop"/>
+
+        <!-- Inject Laptop dependency through Constructor Injection -->
+<!--        <constructor-arg name="laptop" ref="laptop"/>-->
+
+    </bean>
+    <!-- Defining the Laptop bean -->
+    <bean id="laptop" class="org.example.Laptop" primary="true">
+        <!-- No properties to set since Laptop has no extra fields -->
+    </bean>
+
+    <bean id="desktop" class="org.example.Desktop">
+        <!-- No properties to set since Laptop has no extra fields -->
+    </bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
