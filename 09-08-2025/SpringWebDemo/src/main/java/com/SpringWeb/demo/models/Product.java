@@ -1,11 +1,15 @@
 package com.SpringWeb.demo.models;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
 public class Product {
 
+    @Id
     private int id;
     private String name;
     private int price;
