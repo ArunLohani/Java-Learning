@@ -34,6 +34,6 @@ public class Product {
     private Date releaseDate;
     private boolean available;
     private int quantity;
-
+    private String image;
 
 }
